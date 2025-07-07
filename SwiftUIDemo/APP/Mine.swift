@@ -25,5 +25,7 @@ struct MineView: View {
                 router.navigateToOrderHistory()
             }
         }
+        .navigationTitle("我的")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }

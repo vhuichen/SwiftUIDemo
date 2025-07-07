@@ -33,5 +33,7 @@ struct HomeView: View {
                 }
             }
         }
+        .navigationTitle("首页")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }

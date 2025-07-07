@@ -14,9 +14,12 @@
 		2E13820F2E011681004BDF48 /* SwiftUI_in_UIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E13820A2E011681004BDF48 /* SwiftUI_in_UIKitViewController.swift */; };
 		2E2A4C1D2E0D4AB800EB9683 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A4C1C2E0D4AB800EB9683 /* Navigation.swift */; };
 		2E2A4C212E0D4D7800EB9683 /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A4C202E0D4D7800EB9683 /* ViewBuilder.swift */; };
+		2EB1A5832E1BB04D00DDD7BB /* NavigationStackDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB1A5822E1BB04700DDD7BB /* NavigationStackDemo.swift */; };
+		2EB1A5862E1BB1E900DDD7BB /* NavigationViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB1A5852E1BB1E600DDD7BB /* NavigationViewDemo.swift */; };
 		2ECD40A82DF190DF0069CD3F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2ECD40A72DF190DF0069CD3F /* RxSwift */; };
 		2ECD40AB2DF191030069CD3F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2ECD40AA2DF191030069CD3F /* RxCocoa */; };
 		2ECD40AD2DF191080069CD3F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2ECD40AC2DF191080069CD3F /* SnapKit */; };
+		2ED8FB542E17823C004BFE82 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2ED8FB532E17823C004BFE82 /* Kingfisher */; };
 		2EE6750E2E0BA137006B31C7 /* Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6750D2E0BA137006B31C7 /* Push.swift */; };
 		2EE675112E0BA378006B31C7 /* Present.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE675102E0BA378006B31C7 /* Present.swift */; };
 		2EE675142E0C1363006B31C7 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE675132E0C1363006B31C7 /* AnimationView.swift */; };
@@ -63,6 +66,8 @@
 		2E13820C2E011681004BDF48 /* UIKit_in_SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKit_in_SwiftUIView.swift; sourceTree = "<group>"; };
 		2E2A4C1C2E0D4AB800EB9683 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		2E2A4C202E0D4D7800EB9683 /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
+		2EB1A5822E1BB04700DDD7BB /* NavigationStackDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackDemo.swift; sourceTree = "<group>"; };
+		2EB1A5852E1BB1E600DDD7BB /* NavigationViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewDemo.swift; sourceTree = "<group>"; };
 		2EE6750D2E0BA137006B31C7 /* Push.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Push.swift; sourceTree = "<group>"; };
 		2EE675102E0BA378006B31C7 /* Present.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Present.swift; sourceTree = "<group>"; };
 		2EE675132E0C1363006B31C7 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
@@ -93,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ED8FB542E17823C004BFE82 /* Kingfisher in Frameworks */,
 				2ECD40AD2DF191080069CD3F /* SnapKit in Frameworks */,
 				2ECD40AB2DF191030069CD3F /* RxCocoa in Frameworks */,
 				2ECD40A82DF190DF0069CD3F /* RxSwift in Frameworks */,
@@ -149,6 +155,22 @@
 				2E2A4C202E0D4D7800EB9683 /* ViewBuilder.swift */,
 			);
 			path = ViewBuilder;
+			sourceTree = "<group>";
+		};
+		2EB1A5812E1BB03800DDD7BB /* NavigationStack */ = {
+			isa = PBXGroup;
+			children = (
+				2EB1A5822E1BB04700DDD7BB /* NavigationStackDemo.swift */,
+			);
+			path = NavigationStack;
+			sourceTree = "<group>";
+		};
+		2EB1A5842E1BB1D900DDD7BB /* NavigationView */ = {
+			isa = PBXGroup;
+			children = (
+				2EB1A5852E1BB1E600DDD7BB /* NavigationViewDemo.swift */,
+			);
+			path = NavigationView;
 			sourceTree = "<group>";
 		};
 		2ECD40A62DF190A90069CD3F /* Frameworks */ = {
@@ -246,6 +268,8 @@
 				2E2A4C1B2E0D49C700EB9683 /* Navigation */,
 				2E2A4C1F2E0D4D6900EB9683 /* ViewBuilder */,
 				2EFEE3BE2E0E297200D14BCF /* Router */,
+				2EB1A5812E1BB03800DDD7BB /* NavigationStack */,
+				2EB1A5842E1BB1D900DDD7BB /* NavigationView */,
 				2EFFAC892DF18A2F00E7A6BC /* AppDelegate.swift */,
 				2EFFAC8A2DF18A2F00E7A6BC /* Assets.xcassets */,
 				2EFFAC8B2DF18A2F00E7A6BC /* Info.plist */,
@@ -292,6 +316,7 @@
 				2ECD40A72DF190DF0069CD3F /* RxSwift */,
 				2ECD40AA2DF191030069CD3F /* RxCocoa */,
 				2ECD40AC2DF191080069CD3F /* SnapKit */,
+				2ED8FB532E17823C004BFE82 /* Kingfisher */,
 			);
 			productName = SwiftUIDemo;
 			productReference = 2EFFAC2F2DF1890400E7A6BC /* SwiftUIDemo.app */;
@@ -373,6 +398,7 @@
 				2ECD40A52DF190700069CD3F /* XCRemoteSwiftPackageReference "RxSwift" */,
 				2ECD40A92DF190F30069CD3F /* XCRemoteSwiftPackageReference "SnapKit" */,
 				2E1382102E016E5B004BDF48 /* XCRemoteSwiftPackageReference "LookinServer" */,
+				2ED8FB522E1781F8004BFE82 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2EFFAC302DF1890400E7A6BC /* Products */;
@@ -417,6 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EB1A5862E1BB1E900DDD7BB /* NavigationViewDemo.swift in Sources */,
 				2EFEE3D32E0E991000D14BCF /* Product.swift in Sources */,
 				2E13820E2E011681004BDF48 /* UIKit_in_SwiftUIView.swift in Sources */,
 				2EFEE3D52E0E992C00D14BCF /* Order.swift in Sources */,
@@ -430,6 +457,7 @@
 				2EFEE3D72E0E995900D14BCF /* Services.swift in Sources */,
 				2EFFAC972DF18A2F00E7A6BC /* ViewController.swift in Sources */,
 				2EE675112E0BA378006B31C7 /* Present.swift in Sources */,
+				2EB1A5832E1BB04D00DDD7BB /* NavigationStackDemo.swift in Sources */,
 				2EE6750E2E0BA137006B31C7 /* Push.swift in Sources */,
 				2E12E15E2E029D3A00DBCA7F /* SwiftUI_in_UIKitObservableObject.swift in Sources */,
 				2E12E15A2E02639A00DBCA7F /* UIKit_in_SwiftUIPickView.swift in Sources */,
@@ -800,6 +828,15 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		2ED8FB522E1781F8004BFE82 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = versionRange;
+				maximumVersion = 8.0.0;
+				minimumVersion = 7.12.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -817,6 +854,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2ECD40A92DF190F30069CD3F /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		2ED8FB532E17823C004BFE82 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2ED8FB522E1781F8004BFE82 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -8,23 +8,23 @@
 import SwiftUI
 
 struct APPContentView: View {
-    @EnvironmentObject var router: RouterService
+    @StateObject private var homeRouter = RouterService()
+    @StateObject private var mineRouter = RouterService()
     
     var body: some View {
         TabView {
             PYNavigationStack {
                 HomeView()
-                    .navigationTitle("首页")
-                    .navigationBarTitleDisplayMode(.inline)
             }
+            .environmentObject(homeRouter)
             .tabItem {
                 Label("首页", systemImage: "house")
             }
+            
             PYNavigationStack {
                 MineView()
-                    .navigationTitle("我的")
-                    .navigationBarTitleDisplayMode(.inline)
             }
+            .environmentObject(mineRouter)
             .tabItem {
                 Label("我的", systemImage: "person")
             }
@@ -34,13 +34,6 @@ struct APPContentView: View {
 
 @available(iOS 17.0, *)
 #Preview {
-    @Previewable @StateObject var router = RouterService()
-    NavigationStack(path: $router.path) {
-        APPContentView()
-            .navigationDestination(for: AnyRoute.self) { route in
-                route.destination
-            }
-    }
-    .environmentObject(router)
+    APPContentView()
 }
 
