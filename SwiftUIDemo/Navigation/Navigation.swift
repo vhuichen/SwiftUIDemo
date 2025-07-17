@@ -29,7 +29,6 @@ struct CompatibleNavBarView: View {
             }
             .navigationViewStyle(.stack)
         }
-        makeTwoTextsViewBuilder()
     }
     
     private var mainContentView: some View {

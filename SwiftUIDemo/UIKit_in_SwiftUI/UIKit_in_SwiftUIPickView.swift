@@ -53,6 +53,7 @@ private struct ImagePicker: UIViewControllerRepresentable {
         Coordinator(self)
     }
     
+    /// 协调器主要作用：接受UIKit的事件
     class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         var parent: ImagePicker
         

@@ -31,8 +31,43 @@ struct UIKit_in_SwiftUIView: View {
     }
 }
 
-#Preview {
-    UIKit_in_SwiftUIView()
+private struct MyUILabel: UIViewRepresentable {
+    @Binding var text: String
+    var buttonTitle: String
+    var action: (() -> Void)?
+    
+    func makeUIView(context: Context) -> UIView {
+        let view = CustomView()
+        
+        view.button.addTarget(context.coordinator,
+                              action: #selector(Coordinator.buttonTapped),
+                              for: .touchUpInside)
+        
+        return view
+    }
+    
+    func updateUIView(_ uiView: UIView, context: Context) {
+        if let view = uiView as? CustomView {
+            view.update(title: text, buttonTitle: buttonTitle)
+        }
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+    
+    class Coordinator: NSObject {
+        var parent: MyUILabel
+        init(_ parent: MyUILabel) {
+            self.parent = parent
+        }
+        
+        @objc func buttonTapped() {
+            parent.text = "\(Date())"
+            parent.action?()
+        }
+    }
+    
 }
 
 class CustomView: UIView {
@@ -90,41 +125,6 @@ class CustomView: UIView {
     }
 }
 
-private struct MyUILabel: UIViewRepresentable {
-    @Binding var text: String
-    var buttonTitle: String
-    var action: (() -> Void)?
-    
-    func makeUIView(context: Context) -> UIView {
-        let view = CustomView()
-        
-        view.button.addTarget(context.coordinator,
-                              action: #selector(Coordinator.buttonTapped),
-                              for: .touchUpInside)
-        
-        return view
-    }
-    
-    func updateUIView(_ uiView: UIView, context: Context) {
-        if let view = uiView as? CustomView {
-            view.update(title: text, buttonTitle: buttonTitle)
-        }
-    }
-    
-    func makeCoordinator() -> Coordinator {
-        Coordinator(self)
-    }
-    
-    class Coordinator: NSObject {
-        var parent: MyUILabel
-        init(_ parent: MyUILabel) {
-            self.parent = parent
-        }
-        
-        @objc func buttonTapped() {
-            parent.text = "\(Date())"
-            parent.action?()
-        }
-    }
-    
+#Preview {
+    UIKit_in_SwiftUIView()
 }

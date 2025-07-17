@@ -9,7 +9,6 @@ import UIKit
 import SwiftUI
 
 class SwiftUI_in_UIKitViewController: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
